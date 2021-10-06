@@ -1,0 +1,30 @@
+{
+  "name": "mcga_parcial1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CesarPagliarini/MCGA_Parcial1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CesarPagliarini/MCGA_Parcial1/issues"
+  },
+  "homepage": "https://github.com/CesarPagliarini/MCGA_Parcial1#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "express": "^4.17.1",
+    "husky": "^7.0.2",
+    "mongoose": "^6.0.9",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1"
+  }
+}
