@@ -2,6 +2,12 @@
 
 Este es el desarrollo del enunciado que brindo la catedra para cumplimentar con el parcial nº1 de la materia MCGA.
 
+## Enunciado de la Problematrica 
+
+Se desea construir una API REST para gestionar un camping . Las principales funciones del sistema seran: Gestion de Cabañas , Gesion de Clientes y Gestion de Reservas.
+
+
+
 # Pasos a seguir para la ejecucion
 
 1 - npm install
