@@ -58,7 +58,7 @@ const addRecepcionista=async(req,res)=>{
 
 const deleteRecepcionistaById=async(req,res)=>{
 try {
-    const response=await recepcionistaEsquema.findOneAndRemove({_id: req.body.recepcionistaId});
+    const response=await recepcionistaEsquema.findOneAndRemove({_id: req.params.recepcionistaId});
     if (!response || response.length===0){
         return res.status(404).json({
             error:true,
