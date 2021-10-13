@@ -14,9 +14,9 @@ app.listen(port, () => {
     console.log(`Server corriendo en puerto: ${port}`)
 })
 
-//mongoose.connect('mongodb+srv://parcialmcga:mcga123@cluster0.4qowy.mongodb.net/dbparcial?retryWrites=true&w=majority').then((result) => {
-//    console.log('Conexion exitosa con la base de datos')
-//}).catch((error) => {
-//    console.log(`Error en la conexion, error:  ${error}`)
-//})
+mongoose.connect('mongodb+srv://parcialmcga:mcga123@cluster0.4qowy.mongodb.net/dbparcial?retryWrites=true&w=majority').then((result) => {
+    console.log('Conexion exitosa con la base de datos')
+}).catch((error) => {
+    console.log(`Error en la conexion, error:  ${error}`)
+})
 
