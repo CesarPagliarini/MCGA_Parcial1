@@ -102,16 +102,27 @@ const deleteClienteById = async (req, res) => {
 
 
 const updateClienteById = async (req, res) => {
-    let id = req.params.id
-    let update = req.body
-
-    esquemaCliente.findByIdAndUpdate(id, update, (err, clienteUpdate) => {
-        if(err){
-            res.status(500).send({message: "error"})
+    try {
+        
+        const response = await esquemaCliente.findByIdAndUpdate(req.params.id, req.body, {new: true, });
+        if (!response) {
+            return res.status(400).json({
+                error: true,
+                msg: 'No se pudo actualizar el Cliente',
+            });
         }
-        res.status(200).send({message: "Cliente actualizado con exito"})
-    })
 
+        return res.status(200).json({
+            data: response,
+            error: false,
+            message: 'Cliente actualizado con exito'
+        }) 
+    } catch (error) {
+        return res.status(400).json({
+            error: true,
+            msg: error,
+        });
+    }
 }
 
 
