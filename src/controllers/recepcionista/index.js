@@ -14,8 +14,26 @@ const getRecepcionista=async(req,res)=>{ try {
     }
 
 };
+
+const addRecepcionista=async(req,res)=>{
+    try {
+        const recepcionista = new recepcionistaEsquema(req.body);
+        const newRecepcionista=await recepcionista.save();
+
+        return res.status(201).json({
+            data : newRecepcionista,
+            error:false,
+        })
+    } catch (error){
+        return res.status(400).json({
+            error:true,
+            message:error
+        })
+    }
+};
    
 
 module.exports={
-    getRecepcionista
+    getRecepcionista,
+    addRecepcionista
 }
