@@ -12,7 +12,7 @@
     "url": "git+https://github.com/CesarPagliarini/MCGA_Parcial1.git"
   },
   "engines": {
-    "node": ">=0.10.3<15"
+    "node": "10.0.0"
   },
   "author": "",
   "license": "ISC",
