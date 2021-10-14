@@ -78,11 +78,34 @@ try {
     
 }
 };
-   
+
+const updateRecepcionistaById=async(req,res)=>{
+    try {
+        const response=await recepcionistaEsquema.findByid({_id: req.body.recepcionistaId});
+        if (!response || response.length===0){
+            return res.status(404).json({
+                error:true,
+                message:"Recepcionista no Encontrado"
+            })
+        }
+        return res.status(202).json ({
+            data:response,
+            error:false
+        })
+        
+    } catch (error) {
+        return res.status(400).json({
+            error:true,
+            message:error
+        })
+        
+    }
+    };
 
 module.exports={
     getRecepcionista,
     getRecepcionistaById,
     addRecepcionista,
-    deleteRecepcionistaById
+    deleteRecepcionistaById,
+    updateRecepcionistaById
 }
