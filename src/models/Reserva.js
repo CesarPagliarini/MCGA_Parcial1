@@ -2,21 +2,30 @@ const mongoose = require('mongoose');
 
 
 const reservaSchema = new mongoose.Schema({
-    nroReserva: Number,
-    fechaInicio: Date,
-    fechaFin: Date,
+    nroReserva: {
+        type: Number,
+        require: [true, 'Por favor, ingrese el numero de la reserva'],
+    },
+    fechaInicio:{
+        type: Date,
+        require: [true, 'Por favor, ingrese la fecha de inicio'],
+    },
+    fechaFin:{
+        type: Date,
+        required: [true, 'Por favor, ingrese la fecha de fin'],
+    },
     cliente: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Clientes',
+        ref: 'clientes',
     },
     cabaña: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Cabañas',
+        ref: 'cabañas',
     },
     recepcionista: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Recepcionista',
+        ref: 'recepcionista',
     },
 });
 
-module.exports = mongoose.model('Reserva', reservaSchema);
+module.exports = mongoose.model('reservas', reservaSchema);
