@@ -1,6 +1,8 @@
 const express = require('express');     
 const router = require('./routes');     
 const mongoose = require('mongoose');
+const cors = require('cors');
+require('dotenv/config');
 
 
 //const port = 3000
@@ -8,7 +10,12 @@ const port = process.env.PORT || 3000;
 
 const app = express()
 
+
 app.use(express.json());            // Permite obtener el cuerpo del POST via req.body
+
+//CORS 
+app.use(cors());
+
 app.use('/', router);
 
 app.listen(port, () => {
