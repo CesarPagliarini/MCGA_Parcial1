@@ -1,7 +1,7 @@
 const express = require('express');
 
 const clientes = require('./clientes')
-//const recepcionista =require('./recepcionista');
+const recepcionista =require('./recepcionista');
 const cabañas = require('./cabanas')
 
 const router = express.Router();
