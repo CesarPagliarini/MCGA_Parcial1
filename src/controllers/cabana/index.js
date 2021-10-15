@@ -1,4 +1,4 @@
-const esquemaCabaña = require('../../../src/models/Cabañas')
+const esquemaCabaña = require('../../models/cabanas')
 
 const getCabañas = async (req, res) => {
     try{
