@@ -40,3 +40,5 @@ Verolo, Manuel (https://github.com/CesarPagliarini/MCGA_Parcial1/tree/feature-re
 Vozella, Alejandro (https://github.com/CesarPagliarini/MCGA_Parcial1/tree/feature-recepcionista)
 
 # Link Heroku: 
+
+https://app-parcialmcga.herokuapp.com

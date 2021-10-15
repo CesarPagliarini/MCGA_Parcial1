@@ -8,6 +8,7 @@ const router = express.Router();
 
 router.use('/clientes', clientes);
 router.use('/cabanas', cabañas);
+router.use('/recepcionista', recepcionista);
 
 
 module.exports = router
