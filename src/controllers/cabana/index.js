@@ -1,6 +1,6 @@
-const esquemaCabaña = require('../../../src/models/Cabañas')
+const esquemaCabaña = require('../../models/cabanas')
 
-const getCabanas = async (req, res) => {
+const getCabañas = async (req, res) => {
     try{
         const response = await esquemaCabaña.find()
         return res.status(200).json({
@@ -16,7 +16,7 @@ const getCabanas = async (req, res) => {
     }
 }
 
-const addCabana =  async (req, res) => {
+const addCabaña =  async (req, res) => {
     try{
         const Cabaña = new esquemaCabaña(req.body)
         const newCabaña = await Cabaña.save()
@@ -36,7 +36,7 @@ const addCabana =  async (req, res) => {
 
 
 
-const getCabanaById = async (req, res) => {
+const getCabañaById = async (req, res) => {
     try{
         const response = await esquemaCabaña.findOne({ _id: req.params.id })
 
@@ -61,7 +61,7 @@ const getCabanaById = async (req, res) => {
 }
 
 
-const deleteCabanaById = async (req, res) => {
+const deleteCabañaById = async (req, res) => {
     try{
         const response = await esquemaCabaña.deleteOne({ _id: req.params.id })
 
@@ -86,7 +86,7 @@ const deleteCabanaById = async (req, res) => {
 }
 
 
-const updateCabanaById = async (req, res) => {
+const updateCabañaById = async (req, res) => {
     try {
         
         const response = await esquemaCabaña.findByIdAndUpdate(req.params.id, req.body, {new: true, });
@@ -112,9 +112,9 @@ const updateCabanaById = async (req, res) => {
 
 
 module.exports = {
-    getCabanas,
-    addCabana,
-    getCabanaById,
-    deleteCabanaById,
-    updateCabanaById
+    getCabañas,
+    addCabaña,
+    getCabañaById,
+    deleteCabañaById,
+    updateCabañaById
 }

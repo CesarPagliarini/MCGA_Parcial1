@@ -35,8 +35,10 @@ Vozella, Alejandro
 
 
 # Links GitHub
-Pagliarini, Cesar ()
-Verolo, Manuel ()
-Vozella, Alejandro ()
+Pagliarini, Cesar (https://github.com/CesarPagliarini/MCGA_Parcial1/tree/features-clientes-cabañas)
+Verolo, Manuel (https://github.com/CesarPagliarini/MCGA_Parcial1/tree/feature-reservas)
+Vozella, Alejandro (https://github.com/CesarPagliarini/MCGA_Parcial1/tree/feature-recepcionista)
 
 # Link Heroku: 
+
+https://app-parcialmcga.herokuapp.com
