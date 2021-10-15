@@ -18,6 +18,10 @@ app.use(cors());
 
 app.use('/', router);
 
+app.get('/',(req,res)=>{
+    res.send("Servidor OK")
+});
+
 app.listen(port, () => {
     console.log(`Server corriendo en puerto: ${port}`)
 })
