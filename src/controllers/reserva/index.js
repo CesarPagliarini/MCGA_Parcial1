@@ -1,5 +1,5 @@
-const reservaSchema = require('../../../src/models/reserva');
-const clienteSchema = require('../../../src/models/clientes');
+const reservaSchema = require('../../models/reserva');
+
 
 const getReservas = async (req, res) => {
     try{
@@ -7,7 +7,7 @@ const getReservas = async (req, res) => {
         return res.status(200).json({
             data: response,
             error: false,
-            msg: 'Reservas encontradas exitosamentes'
+            msg: 'Reservas encontradas exitosamente'
         })
     }catch(error){
         return res.status(400).json({

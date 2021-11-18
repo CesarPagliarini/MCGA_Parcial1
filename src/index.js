@@ -1,8 +1,8 @@
-const express = require('express');     
-const router = require('./routes');     
-const mongoose = require('mongoose');
-const cors = require('cors');
-require('dotenv/config');
+const express = require('express');         // Framework web que permite crear APIS
+const router = require('./routes');         //
+const mongoose = require('mongoose');       // Libreria para el manejo de la base de datos
+const cors = require('cors');               // Se utiliza para matchear origenes cruzados
+require('dotenv/config');                   // Se utiliza para manejar las variables globales
 
 
 //const port = 3000

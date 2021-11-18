@@ -11,7 +11,8 @@ router.route('/').post(controller.addRecepcionista);
 
 router.route('/:recepcionistaId').delete(controller.deleteRecepcionistaById);
 
-router.route('/:recepcionistaId').put(controller.updateRecepcionistaById);
+//router.route('/:recepcionistaId').put(controller.updateRecepcionistaById);
 
+router.route('/:id').put(controller.updateRecepcionistaById);
 
 module.exports = router
